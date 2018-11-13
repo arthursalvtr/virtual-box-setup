@@ -1,0 +1,8 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ${ethernets_name}:
+      addresses:
+         - ${ip_range}
+      dhcp4: no
