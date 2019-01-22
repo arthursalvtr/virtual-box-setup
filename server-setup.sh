@@ -9,15 +9,15 @@ sudo apt-get update -y && sudo apt-get upgrade -y
 
 echo -e "\nInstalling Git..."
 # installing git
-sudo apt-get install git 
+sudo apt-get install git -y
 
 echo -e "\nDownloading installation script"
 mkdir $(pwd)/eric
 cd $(pwd)/eric
 git clone https://github.com/arthursalvtr/virtual-box-setup.git setup
-cd $(pwd)/eric/setup
+cd $(pwd)/setup
 
-chmod +x vm-setup.sh setup-vbox-file-sharing.sh setup-host-only.sh install-dockerx.sh install-docker.sh
+chmod 774 vm-setup.sh setup-vbox-file-sharing.sh setup-host-only.sh install-dockerx.sh install-docker.sh
 
 sudo ./install-docker.sh
 
