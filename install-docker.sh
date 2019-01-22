@@ -4,7 +4,7 @@
 echo "Removing previous docker installation"
 sudo apt-get remove docker docker-engine docker.io
 # install docker from convenience script
-echo "Installing new Docker"
+echo -e "\nInstalling new Docker"
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 
